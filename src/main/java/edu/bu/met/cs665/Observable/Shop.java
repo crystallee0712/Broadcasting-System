@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Shop implements Request {
 
-    private Order order;
+    private Order order = null;
     private List<Drivers> driversList = new ArrayList<>();
 
     /**
