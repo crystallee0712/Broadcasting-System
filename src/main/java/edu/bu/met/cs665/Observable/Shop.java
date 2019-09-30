@@ -6,11 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Shop implements Request {
-  private Order order;
-  public Shop(Order order) {
-        this.order = order;
-    }
-  private List<Drivers> driversList = new ArrayList<>();
+
+    private Order order;
+    private List<Drivers> driversList = new ArrayList<>();
 
     /**
      * Register a driver to receive messages from the order request changes
@@ -44,7 +42,7 @@ public class Shop implements Request {
     public void setOrder(Order order){
         this.order = order;
         notifyObservers();
-        System.out.println("*******************************************************************");
+        System.out.println("******************************************************************************");
     }
 
     /**

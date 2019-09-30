@@ -12,17 +12,17 @@ public interface Request {
      *
      * @param driver the observer object
      */
-  void addObserver(Drivers driver);
+    void addObserver(Drivers driver);
 
     /**
      * remove an observer from our observer list.
      *
      * @param driver the observer object
      */
-  void removeObserver(Drivers driver);
+    void removeObserver(Drivers driver);
 
     /**
      * Notify all observers.
      */
-  void notifyObservers();
+    void notifyObservers();
 }

@@ -9,7 +9,7 @@ import org.junit.Test;
 
 public class TestRequest {
 
-
+    private Shop shop = new Shop();
     private Drivers driver1 = new Taxi("David");
     private Drivers driver2 = new Taxi("Bob");
     private Drivers driver3 = new Taxi("Adam");
@@ -28,15 +28,13 @@ public class TestRequest {
 
         System.out.println("This is Junit test 1");
         System.out.println("---------------------");
-        Order order = new Order(1235, "Andy Williams", 12.58);
-        Shop shop = new Shop(order);
         shop.addObserver(driver1);
         shop.addObserver(driver2);
         shop.addObserver(driver3);
         shop.addObserver(driver4);
         shop.addObserver(driver5);
 
-
+        Order order = new Order(1235, "Andy Williams", 12.58);
         shop.setOrder(order);
 
     }
@@ -54,8 +52,7 @@ public class TestRequest {
 
         System.out.println("This is Junit test 2");
         System.out.println("---------------------");
-        Order order = new Order(1358, "Lily Woodward", 39.09);
-        Shop shop = new Shop(order);
+
         shop.addObserver(driver1);
         shop.addObserver(driver2);
         shop.addObserver(driver3);
@@ -64,7 +61,7 @@ public class TestRequest {
 
         shop.removeObserver(driver1);
 
-
+        Order order = new Order(1358, "Lily Woodward", 39.09);
         shop.setOrder(order);
     }
     /**
@@ -80,8 +77,6 @@ public class TestRequest {
         System.out.println("This is Junit test 3");
         System.out.println("---------------------");
 
-        Order order = new Order(1367, "Dan White", 25.89);
-        Shop shop = new Shop(order);
         shop.addObserver(driver1);
         shop.addObserver(driver2);
         shop.addObserver(driver3);
@@ -91,7 +86,7 @@ public class TestRequest {
         Drivers driver6 = new Van("Eric");
         shop.addObserver(driver6);
 
-
+        Order order = new Order(1367, "Dan White", 25.89);
         shop.setOrder(order);
     }
 }
